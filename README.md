@@ -2,4 +2,4 @@
 
 A retro remix of Galaga and Space Invaders
 
-(c) 2019 Steven Harding
+(c) 2019 Steven Harding, Michael Winberry
