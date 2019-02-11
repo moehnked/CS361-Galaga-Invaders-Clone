@@ -24,10 +24,10 @@ class GaligaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.move_ship_left()
+      @ship.move_left()
     end
     if else key == 'd'
-      @ship.move_ship_right()
+      @ship.move_right()
     end 
     if else key == ' '
       @ship.move_ship_shoot()
