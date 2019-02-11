@@ -1,5 +1,6 @@
-class spaceship
-  def initialize(x, width, height)
+class Spaceship 
+  def initialize(x, y, width, height)
+    @y = y
     @x = x
     @width = width
     @height = height
@@ -11,6 +12,11 @@ class spaceship
 
   def move_ship_right()
   	@x += 10
+  end
+
+  def ship_shoot()
+    Battery.create_missile(x, y)
+  	#needs to be implemented 
   end
 
 end
