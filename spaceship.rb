@@ -1,22 +1,42 @@
 class Spaceship 
-  def initialize(x, y, width, height)
-    @y = y
-    @x = x
-    @width = width
-    @height = height
+  
+  DEFAULT_VELOCITY = 10
+
+  attr_accessor :x, :y :velocity
+
+  def initialize(args)
+    @y = args[:y]
+    @x = args[:x]
+    @width = args[:width]
+    @height = args[:height]
+    @velocity = 10
   end
 
   def move_ship_left()
-  	@x -= 10
+  	move(DEFAULT_VELOCITY)
   end
 
   def move_ship_right()
-  	@x += 10
+  	move(-DEFAULT_VELOCITY)
+  end
+  
+  def move(xaxis)
+    self.x += xaxis
   end
 
-  def ship_shoot()
-    Battery.create_missile(x, y)
-  	#needs to be implemented 
+  def muzzle_location()
+    Vector.new(x,top_edge)    
   end
+
+  def top_edge()
+      y - half_height
+  end
+
+  def half_height()
+      height / 2
+  end
+
+  Vector = Struct.new(:x, :y)
+
 
 end

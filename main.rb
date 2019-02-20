@@ -4,11 +4,11 @@ class GaligaInvaders
 
   def initialize
     @caption = "Galaga Invaders"
-    @ship = SpaceShip.new(100, 100, 50)
+    @ship = SpaceShip.new({height: 100, width: 100, x: 50, y: 50})
   end
   
   def update
-    # update the state of the world
+    # aliens are moving
   end
   
   def draw
@@ -30,7 +30,7 @@ class GaligaInvaders
       @ship.move_ship_right()
     end 
     if else key == ' '
-      @ship.move_ship_shoot()
+      @ship.ship_shoot()
   end
 
 end
