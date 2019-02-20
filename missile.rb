@@ -1,20 +1,18 @@
-class Missle
-
-	def initialize(x, y)
+class Missile
+	attr_reader :x, :y, :velocity
+	
+	def initialize(x:, y:, velocity:)
 		@x = x
 		@y = y
+		@velocity = velocity
 	end
 
 	def move
-		@y -= 10
+		y += velocity
 	end
 
 	def draw
-		# draw missle
-	end
-
-	def collision
-		# collide with fort/player ship
+		# ...
 	end
 
 end
