@@ -8,7 +8,7 @@ class MissleBattery
   end
 
   def new_missile(x:, y:, velocity:)
-    missiles << Missile.new(x, y, velocity)
+    missiles << Missile.new(x: x, y: y, velocity: velocity)
   end
 
   def move_missiles
