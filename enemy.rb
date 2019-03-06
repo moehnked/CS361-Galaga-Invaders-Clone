@@ -1,4 +1,5 @@
-class Enemy includes Moveable
+class Enemy
+  include Moveable
 
   BASIC_VELOCITY = 10
   FIRING_VELOCITY = 10
@@ -15,21 +16,20 @@ class Enemy includes Moveable
     {x: self.x, y: self.y, velocity: FIRING_VELOCITY}
   end
 
-  #think about pulling the move methods out in future issue.
   def move_down
-    self.y += BASIC_VELOCITY
+    Moveable.move(y, -BASIC_VELOCITY)
   end
 
   def move_up
-    self.y -= BASIC_VELOCITY
+    Moveable.move(y, BASIC_VELOCITY)
   end
 
   def move_left
-    self.x -= BASIC_VELOCITY
+    Moveable.move(x, -BASIC_VELOCITY)
   end
 
   def move_right
-    self.x += BASIC_VELOCITY
+    Moveable.move(x, BASIC_VELOCITY)
   end
 
 
