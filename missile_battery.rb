@@ -1,4 +1,4 @@
-require_relative 'missle'
+require_relative 'missile'
 
 class MissleBattery
   attr_reader :missiles
