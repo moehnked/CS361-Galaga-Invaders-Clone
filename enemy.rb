@@ -1,4 +1,4 @@
-class Enemy
+class Enemy includes Moveable
 
   BASIC_VELOCITY = 10
   attr_accessor :x, :y, :width, :height;

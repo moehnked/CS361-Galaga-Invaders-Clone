@@ -1,4 +1,4 @@
-class Spaceship 
+class Spaceship includes Moveable
   
   DEFAULT_VELOCITY = 10
 
@@ -13,15 +13,11 @@ class Spaceship
   end
 
   def move_ship_left()
-  	move(DEFAULT_VELOCITY)
+  	Moveable.move(self.x, DEFAULT_VELOCITY)
   end
 
   def move_ship_right()
-  	move(-DEFAULT_VELOCITY)
-  end
-  
-  def move(xaxis)
-    self.x += xaxis
+  	Moveable.move(self.x,-DEFAULT_VELOCITY)
   end
 
   def muzzle_location()

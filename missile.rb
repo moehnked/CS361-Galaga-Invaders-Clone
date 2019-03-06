@@ -1,4 +1,4 @@
-class Missile
+class Missile includes Moveable
 	attr_reader :x, :y, :velocity
 	
 	def initialize(x:, y:, velocity:)
@@ -8,9 +8,8 @@ class Missile
 	end
 
 	def move
-		y += velocity
+		Moveable.move(self.y,velocity)
 	end
-
 	def draw
 		# ...
 	end
