@@ -10,7 +10,7 @@ class Missile
   end
 
   def move
-    Moveable.move(self.x, velocity)
+    move(self.x, velocity)
   end
 
 end

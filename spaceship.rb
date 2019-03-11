@@ -1,9 +1,9 @@
-class Spaceship 
+class Spaceship
   include Moveable
 
   DEFAULT_VELOCITY = 10
 
-  attr_accessor :x, :y
+  attr_accessor :x, :y, :height
 
   def initialize(args)
     @height = args[:height]
@@ -13,23 +13,23 @@ class Spaceship
   end
 
   def move_ship_left()
-  	Moveable.move(self.x, DEFAULT_VELOCITY)
+    move(x, DEFAULT_VELOCITY)
   end
 
   def move_ship_right()
-  	Moveable.move(self.x, -DEFAULT_VELOCITY)
+    move(x, -DEFAULT_VELOCITY)
   end
 
-  def muzzle_location()
-    Vector.new(x, top_edge)    
+  def muzzle_location
+    Vector.new(x, top_edge)
   end
 
-  def top_edge()
-      y - half_height
+  def top_edge
+    y - half_height
   end
 
   def half_height()
-      height / 2
+    height / 2
   end
 
   Vector = Struct.new(:x, :y)
