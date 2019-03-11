@@ -1,15 +1,15 @@
-class Spaceship includes Moveable
-  
+class Spaceship 
+  include Moveable
+
   DEFAULT_VELOCITY = 10
 
-  attr_accessor :x, :y :velocity
+  attr_accessor :x, :y
 
   def initialize(args)
-    @y = args[:y]
-    @x = args[:x]
-    @width = args[:width]
     @height = args[:height]
-    @velocity = 10
+    @width = args[:width]
+    @x = args[:x]
+    @y = args[:y]
   end
 
   def move_ship_left()

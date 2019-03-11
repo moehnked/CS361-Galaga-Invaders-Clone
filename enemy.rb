@@ -4,6 +4,7 @@ class Enemy
   BASIC_VELOCITY = 10
   FIRING_VELOCITY = 10
   attr_accessor :x, :y, :width, :height;
+
   def initialize(x, y, width, height)
     @x = x
     @y = y
@@ -31,6 +32,5 @@ class Enemy
   def move_right
     Moveable.move(x, BASIC_VELOCITY)
   end
-
-
+  
 end
