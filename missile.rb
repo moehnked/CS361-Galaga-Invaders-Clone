@@ -10,5 +10,5 @@ class Missile
   def move
     y += velocity
   end
-end
 
+end

@@ -17,11 +17,11 @@ class Spaceship includes Moveable
   end
 
   def move_ship_right()
-  	Moveable.move(self.x,-DEFAULT_VELOCITY)
+  	Moveable.move(self.x, -DEFAULT_VELOCITY)
   end
 
   def muzzle_location()
-    Vector.new(x,top_edge)    
+    Vector.new(x, top_edge)    
   end
 
   def top_edge()
@@ -33,6 +33,5 @@ class Spaceship includes Moveable
   end
 
   Vector = Struct.new(:x, :y)
-
 
 end
