@@ -1,7 +1,8 @@
 require_relative 'spaceship'
 
-class GaligaInvaders
+class GalagaInvaders
 
+  attr_accessor :ship
   def initialize
     @caption = "Galaga Invaders"
     @ship = SpaceShip.new({height: 100, width: 100, x: 50, y: 50})
@@ -12,7 +13,7 @@ class GaligaInvaders
   end
   
   def draw
-    @ship.draw
+    ship.draw
   end
 
   def show
@@ -24,13 +25,12 @@ class GaligaInvaders
 
   def key_pressed(key)
     if key == 'a'
-      @ship.move_left()
+      ship.move_left
+    elsif key == 'd'
+      ship.move_right
+    elsif key == ' '
+      ship.ship_shoot
     end
-    if else key == 'd'
-      @ship.move_right()
-    end 
-    if else key == ' '
-      @ship.ship_shoot()
   end
 
 end

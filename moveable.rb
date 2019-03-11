@@ -1,6 +1,6 @@
 module Movable
-
-  def self.move(axis, velocity)
+  
+  def move(axis, velocity)
     axis += velocity
   end
 
